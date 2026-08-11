@@ -16,6 +16,8 @@ import Footer from "./Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminRoute from "./components/AdminRoute";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
     return (
@@ -43,6 +45,15 @@ function App() {
                             <AddProduct />
                         </ProtectedRoute>
                     }
+                />
+                <Route
+                   path="/forgot-password"
+                 element={<ForgotPassword />}
+                 />
+
+                 <Route
+                 path="/reset-password/:token"
+                 element={<ResetPassword />}
                 />
 
                 <Route

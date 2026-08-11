@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axiosInstance from "../api/axios";
+import { NavLink } from "react-router-dom";
 
 function Register() {
   const [name, setName] = useState("");
@@ -90,6 +91,15 @@ function Register() {
         >
           Register
         </button>
+        <p className="text-center mt-4 text-gray-600">
+          Already have an account?{" "}
+          <NavLink
+            to="/login"
+            className="text-blue-700 font-semibold hover:underline"
+          >
+            Login
+          </NavLink>
+        </p>
       </div>
     </div>
   );

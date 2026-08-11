@@ -117,6 +117,16 @@ Please share the price and details.`;
       <h1 className="text-4xl font-bold text-center text-blue-700 mb-10">
         Our Products
       </h1>
+      {user?.role === "admin" && (
+        <div className="flex justify-center mb-6">
+          <button
+            onClick={() => navigate("/add-product")}
+            className="bg-blue-700 text-white px-5 py-3 rounded-lg hover:bg-blue-800 transition"
+          >
+            + Add Product
+          </button>
+        </div>
+      )}
 
       <div className="flex justify-center mb-10">
         <input

@@ -128,16 +128,13 @@ const forgotPassword = asyncHandler(async (req, res) => {
         });
 
     }
-    res.status(200).json({
-        success: true,
-        message: "User found"
-    });
+
     const resetToken = crypto.randomBytes(32).toString("hex");
     user.resetPasswordToken = resetToken;
 
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
     await user.save();
-    const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
+    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
     const message = `
 Reset your password using the link below:
 
@@ -194,10 +191,10 @@ const resetPassword = asyncHandler(async (req, res) => {
 
 });
 const getProfile = asyncHandler(async (req, res) => {
-  res.status(200).json({
-    success: true,
-    data: req.user,
-  });
+    res.status(200).json({
+        success: true,
+        data: req.user,
+    });
 });
 
 
