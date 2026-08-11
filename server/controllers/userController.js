@@ -134,14 +134,9 @@ const forgotPassword = asyncHandler(async (req, res) => {
 
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
     await user.save();
-    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
-    const message = `
-Reset your password using the link below:
-
-${resetUrl}
-
-This link will expire in 10 minutes.
-`;
+    const resetUrl = `https://omsai-textflow-1.onrender.com/reset-password/${resetToken}`;
+    const message = `Reset your password using the link below:${resetUrl}
+This link will expire in 10 minutes.`;
     await sendEmail({
         email: user.email,
         subject: "Password Reset Request",
