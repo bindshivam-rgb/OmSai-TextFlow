@@ -4,7 +4,7 @@ A full-stack e-commerce web application built for Om Sai Text Chem to manage tex
 
 ## 🚀 Live Demo
 
-https://omsai-textflow-1.onrender.com
+https://omsai-textflow.onrender.com
 
 ## 📌 Features
 
