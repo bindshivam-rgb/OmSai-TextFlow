@@ -61,7 +61,7 @@ https://omsai-textflow.onrender.com
 ### Email
 - Resend
 
-### Deployment
+### Deployment & Version Control
 - Render
 - GitHub
 
