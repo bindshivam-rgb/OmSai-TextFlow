@@ -14,8 +14,7 @@ function AdminDashboard() {
             const response = await axiosInstance.get("/dashboard/stats");
 
             setStats(response.data.data);
-        } catch (error) {
-            console.log(error);
+                 } catch (error) {
 
             if (error.response) {
                 alert(error.response.data.message);

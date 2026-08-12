@@ -26,7 +26,6 @@ function ForgotPassword() {
             setEmail("");
 
         } catch (error) {
-            console.log(error);
 
             if (error.response) {
                 alert(error.response.data.message);

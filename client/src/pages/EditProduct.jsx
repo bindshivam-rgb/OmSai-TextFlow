@@ -29,7 +29,6 @@ function EditProduct() {
 
             setFormData(response.data.data);
         } catch (error) {
-            console.log(error);
             alert("Failed to load product");
         }
     }
@@ -65,7 +64,6 @@ function EditProduct() {
             navigate("/products");
 
         } catch (error) {
-            console.log(error);
 
             if (error.response) {
                 alert(error.response.data.message);

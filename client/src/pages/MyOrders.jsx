@@ -15,7 +15,6 @@ function MyOrders() {
 
       setOrders(response.data.data);
     } catch (error) {
-      console.log(error);
 
       if (error.response) {
         alert(error.response.data.message);

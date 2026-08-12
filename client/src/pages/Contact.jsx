@@ -21,10 +21,6 @@ function Contact(){
           const whatsappURL = `https://wa.me/918591134265?text=${encodeURIComponent(message)}`;
         window.open(whatsappURL, "_blank");
 
-        console.log(name);
-        console.log(email);
-        console.log(message);
-
         setName("");
         setEmail("");
         setMessage("");

@@ -21,11 +21,9 @@ function Products() {
   async function fetchProducts() {
     try {
       const response = await axiosInstance.get("/products");
-      console.log(response.data);
       setProducts(response.data.data);
     } catch (error) {
 
-      console.log(error);
       alert("Failed to load products");
     } finally {
       setLoading(false);
@@ -74,7 +72,6 @@ Please share the price and details.`;
       navigate("/my-orders");
 
     } catch (error) {
-      console.log(error);
 
       if (error.response) {
         alert(error.response.data.message);
@@ -83,8 +80,6 @@ Please share the price and details.`;
       }
     }
   };
-
-
 
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm(
@@ -102,7 +97,6 @@ Please share the price and details.`;
 
       setSelectedProduct(null);
     } catch (error) {
-      console.log(error);
 
       if (error.response) {
         alert(error.response.data.message);

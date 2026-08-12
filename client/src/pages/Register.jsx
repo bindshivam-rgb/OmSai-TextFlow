@@ -26,7 +26,6 @@ function Register() {
         password,
       });
 
-      console.log(response.data);
       alert("Registration Successful");
 
       // Clear form
@@ -36,7 +35,6 @@ function Register() {
       setConfirmPassword("");
 
     } catch (error) {
-      console.log(error);
 
       if (error.response) {
         alert(error.response.data.message);

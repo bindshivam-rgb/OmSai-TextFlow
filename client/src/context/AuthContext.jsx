@@ -19,8 +19,6 @@ const AuthProvider = ({ children }) => {
 
         setUser(response.data.data);
       } catch (error) {
-        console.log(error);
-
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
 

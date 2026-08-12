@@ -14,9 +14,7 @@ function AdminOrders() {
             const response = await axiosInstance.get("/orders");
 
             setOrders(response.data.data);
-        } catch (error) {
-            console.log(error);
-
+              } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
             } else {
@@ -39,7 +37,6 @@ function AdminOrders() {
             fetchOrders();
 
         } catch (error) {
-            console.log(error);
 
             if (error.response) {
                 alert(error.response.data.message);
